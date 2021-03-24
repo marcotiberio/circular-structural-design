@@ -1,1 +1,0 @@
-# circular-structural-design
