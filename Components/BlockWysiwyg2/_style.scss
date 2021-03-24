@@ -1,0 +1,32 @@
+[is='flynt-block-wysiwyg2'] {
+  .content {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 140px;
+
+
+
+    @include reset-content-margins;
+    text-align: inherit;
+
+    &--textLeft {
+      text-align: left;
+    }
+
+    &--textCenter {
+      text-align: center;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .centerContentMaxWidth {
+    max-width: 1000px;
+    margin-left: 0;
+  }
+  
+}
