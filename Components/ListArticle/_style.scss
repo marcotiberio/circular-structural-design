@@ -1,5 +1,4 @@
 [is='flynt-list-article'] {
-
   .grid {
     @include reset-list;
     display: flex;
@@ -44,13 +43,12 @@
   }
 
   .content {
-    height: 100%;
-
+    border-bottom: 1px solid #000;
+    column-gap: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-
-    border-bottom: 1px solid #000000;
+    height: 100%;
+    
 
     &-inner {
       @include reset-content-margins;
@@ -68,15 +66,15 @@
 
   .content:nth-child(1),
   .content:nth-child(2) {
-    border-top: 1px solid #000000;
     border-bottom: 0;
+    border-top: 1px solid #000;
   }
 
   .slide-toggle {
+    border-bottom: 1px solid #000;
     display: grid;
-    place-items: flex-end;
     padding: 5px 5px 0;
-    border-bottom: 1px solid #000000;
+    place-items: flex-end;
 
     p {
       margin: 0;

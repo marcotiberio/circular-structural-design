@@ -3,14 +3,12 @@
   height: auto;
   
   .content {
+    @include reset-content-margins;
 
+    column-gap: 140px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 140px;
-
-
-
-    @include reset-content-margins;
+    
     text-align: inherit;
 
     &--textLeft {
@@ -28,8 +26,8 @@
   }
 
   .centerContentMaxWidth {
-    max-width: 1000px;
     margin-left: 0;
+    max-width: 1000px;
   }
   
 }

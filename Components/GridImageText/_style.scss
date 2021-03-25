@@ -1,5 +1,4 @@
 [is='flynt-grid-image-text'] {
-
   .preContent {
     padding-top: 50px;
     text-transform: uppercase;
@@ -65,10 +64,10 @@
   }
 
   .slide-toggle {
+    border-bottom: 1px solid #000;
     display: grid;
-    place-items: flex-end;
     padding: 5px 5px 0;
-    border-bottom: 1px solid #000000;
+    place-items: flex-end;
 
     p {
       margin: 0;

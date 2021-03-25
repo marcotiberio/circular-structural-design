@@ -20,9 +20,8 @@ html {
   line-height: 1.625;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
-  word-wrap: break-word;
-
   scroll-behavior: smooth;
+  word-wrap: break-word;
 
 
   *,
@@ -54,8 +53,8 @@ body {
   a:hover,
   a:focus {
     color: $color-headline;
-    text-decoration: none;
     outline: 0;
+    text-decoration: none;
   }
 }
 
@@ -130,8 +129,8 @@ p,
 .paragraph,
 table,
 figure {
-  margin: 0 0 1.2rem;
   color: $color-text;
+  margin: 0 0 1.2rem;
 }
 
 hr {
@@ -266,9 +265,10 @@ button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  outline: 0;
   padding: 0;
   text-align: inherit;
-  outline: 0;
+  
 }
 
 .button {
@@ -283,13 +283,13 @@ button {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: inherit;
+  outline: 0;
   padding: 1rem 1.5rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   user-select: none;
-  outline: 0;
 
   &:disabled,
   &--disabled {

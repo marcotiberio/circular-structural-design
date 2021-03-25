@@ -1,15 +1,14 @@
 [is='flynt-navigation-main'] {
   $navigation-height: 100px;
-  z-index: 1000;
-  ;
 
   display: none;
+  z-index: 1000;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
     display: block;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
   }
 
@@ -19,12 +18,12 @@
 
   .container {
     background-color: $color-background;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
     display: flex;
     height: 100%;
     justify-content: space-between;
     padding-bottom: 30px;
     padding-top: 30px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .15);
   }
 
   .logo {
@@ -54,9 +53,9 @@
       color: $color-text;
       display: inline-block;
       font-weight: 700;
-      text-transform: uppercase;
       padding: 7px 39px;
       text-decoration: none;
+      text-transform: uppercase;
       transition: color 0.2s ease-out;
 
       &:hover,
