@@ -9,7 +9,17 @@
     @media (min-width: $breakpoint-tablet) {
       display: flex;
       flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: flex-end;
+      padding-right: 160px;
+    }
+
+    .menu {
+      margin: 0 80px;
+
+      li {
+        margin: 0 80px;
+        text-transform: uppercase;
+      }
     }
   }
 

@@ -32,6 +32,12 @@
             <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
           {% endif %}
         </figure>
+        {% if header %}
+          <h1 class="header">{{ header|e }}</h1>
+        {% endif %}
+        {% if linkText and linkUrl %}
+          <a class="content-link" href="{{ linkUrl|e }}" target="_blank">→ {{ linkText|e }}</a>
+        {% endif %}
       </div>
     </div>
   </div>

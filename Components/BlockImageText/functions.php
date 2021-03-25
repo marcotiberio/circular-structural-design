@@ -27,21 +27,50 @@ function getACFLayout()
                 ]
             ],
             [
-                'label' => __('Image', 'flynt'),
-                'name' => 'image',
-                'type' => 'image',
-                'preview_size' => 'medium',
-                'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
-                'required' => 1,
-                'mime_types' => 'jpg,jpeg,png,svg'
-            ],
-            [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
                 'type' => 'wysiwyg',
                 'delay' => 1,
                 'media_upload' => 0,
                 'required' => 1,
+            ],
+            [
+                'label' => __('Image', 'flynt'),
+                'name' => 'image',
+                'type' => 'image',
+                'preview_size' => 'medium',
+                'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
+                'required' => 1,
+                'mime_types' => 'jpg,jpeg,png,svg',
+                'wrapper' => [
+                    'width' => 30
+                ],
+            ],
+            [
+                'label' => __('Header', 'flynt'),
+                'name' => 'header',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => 20
+                ],
+            ],
+            [
+                'label' => __('Link Text', 'flynt'),
+                'name' => 'linkText',
+                'type' => 'text',
+                'delay' => 1,
+                'wrapper' => [
+                    'width' => 20
+                ],
+            ],
+            [
+                'label' => __('Link URL', 'flynt'),
+                'name' => 'linkUrl',
+                'type' => 'text',
+                'delay' => 1,
+                'wrapper' => [
+                    'width' => 20
+                ],
             ],
             [
                 'label' => __('Options', 'flynt'),

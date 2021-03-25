@@ -1,0 +1,58 @@
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-accordion-project">
+  <div class="container centerMaxWidthContainer">
+    {% if preContentHtml or header %}
+      <div class="preContent">
+        <h1>{{ header|e}}</h1>
+        {{ preContentHtml|e('wp_kses_post')}}
+      </div>
+    {% endif %}
+    <div class="content">
+      <ul class="accordion">
+        {% for panel in accordionPanels %}
+          <li class="panel">
+            <button class="panel-trigger p" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}">
+              {{ panel.panelTitle|e }}
+            </button>
+            <div class="panel-content" aria-hidden="true" id="content-{{ loop.index }}">
+              <div class="panel-inner">
+                {{ panel.panelContent|e('wp_kses_post') }}
+                {% if panel.linkText and panel.linkUrl %}
+                  <a class="content-link" href="{{ panel.linkUrl|e }}" target="_blank">→ {{ panel.linkText|e }}</a>
+                {% endif %}
+                <div class="box-inner box-inner--image">
+                  <figure class="figure">
+                    {% if panel.image.post_mime_type == 'image/svg+xml' %}
+                      <img
+                        class="image lazyload"
+                        src="{{ placeholderImage(500, (500 * 0.75)|round) }}"
+                        data-src="{{ panel.image.src }}"
+                        alt="{{ panel.image.alt|e }}">
+                    {% else %}
+                      <img class="figure-image lazyload"
+                        src="{{ panel.image.src|resizeDynamic(500) }}"
+                        srcset="{{ placeholderImage(500, 500 / panel.image.aspect) }}"
+                        data-srcset="
+                          {{ panel.image.src|resizeDynamic(1920) }} 1920w,
+                          {{ panel.image.src|resizeDynamic(1320) }} 1320w,
+                          {{ panel.image.src|resizeDynamic(1280) }} 1280w,
+                          {{ panel.image.src|resizeDynamic(1035) }} 1035w,
+                          {{ panel.image.src|resizeDynamic(860) }} 860w,
+                          {{ panel.image.src|resizeDynamic(750) }} 750w,
+                          {{ panel.image.src|resizeDynamic(500) }} 500w,
+                          {{ panel.image.src|resizeDynamic(375) }} 375w"
+                        data-sizes="auto"
+                        alt="{{ panel.image.alt|e }}">
+                      {% endif %}
+                    {% if panel.image.caption %}
+                      <figcaption class="figure-caption">{{ panel.image.caption|e }}</figcaption>
+                    {% endif %}
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

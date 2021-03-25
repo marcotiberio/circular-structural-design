@@ -12,7 +12,7 @@
             <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
               <h3 class="content-title">{{ item.title }}</h3>
             </a>
-            <div class="content boxShadow themeReset">
+            <div class="content">
                 <img class="content-image lazyload"
                   src="{{ item.thumbnail.src|resizeDynamic(424, 283) }}"
                   srcset="{{ placeholderImage(3, 2) }}"
@@ -31,14 +31,14 @@
                 <div class="content-inner boxPadding">
                   <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p>
                 </div>
-              <footer class="content-footer">
+              <footer class="content-footer" style="display: none;">
                 <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
               </footer>
             </div>
           </li>
         {% endfor %}
       </ul>
-      <div class="allPostsLink">
+      <div class="allPostsLink" style="display: none;">
         <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <div class="container centerMaxWidthContainer">
     {% if preContentHtml %}
       <div class="preContent">
-        {{ preContentHtml|e('wp_kses_post') }}
+        <h2 id="{{ preContentHtml|e }}">{{ preContentHtml|e }}</h2>
       </div>
     {% endif %}
     <ul class="grid grid--columns{{ options.columns }}">
@@ -33,12 +33,11 @@
                 <div class="slide-toggle"><p>Show</p></div>
                 <div class="content-inner {{ options.card == 'layoutCard' ? 'boxPadding' }}">
                   {{ item.contentHtml|e('wp_kses_post') }}
+                  {% if item.linkText and item.linkUrl %}
+                    <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">{{ item.linkText|e }}</a>
+                  {% endif %}
                 </div>
-                {% if item.linkText and item.linkUrl %}
-                  <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">{{ item.linkText|e }}</a>
-                {% endif %}
               {% endif %}
-            </div>
           </li>
         {% endif %}
       {% endfor %}

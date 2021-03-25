@@ -1,6 +1,6 @@
 [is='flynt-block-image-text'] {
   .container {
-    @include center(500px + 2 * $container-padding-mobile);
+    @include center(600px + 2 * $container-padding-mobile);
   }
 
   .box-inner {
@@ -13,18 +13,24 @@
 
   @media (min-width: $breakpoint-tablet-horizontal) {
     .container {
-      @include center(1080px + 2 * $container-padding-tablet, $container-padding-tablet);
+      @include center(1440px + 2 * $container-padding-tablet, $container-padding-tablet);
     }
 
     .box {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
       margin: 0 $container-padding-tablet * -1;
 
-      &-inner {
+      &-inner--content {
         @include reset-content-margins('both');
         padding: 0 $container-padding-tablet;
-        width: 50%;
+        width: 40%;
+      }
+
+      &-inner--image {
+        @include reset-content-margins('both');
+        padding: 0 $container-padding-tablet;
+        width: 60%;
       }
 
       &--imageRight {

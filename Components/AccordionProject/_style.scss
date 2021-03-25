@@ -1,0 +1,85 @@
+[is='flynt-accordion-project'] {
+
+  .container {
+
+    @media (max-width: $breakpoint-tablet-horizontal - 1) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+
+    .preContent {
+      text-align: left;
+      max-width: 1440px;
+    }
+  
+    .accordion {
+      @include reset-list;
+    }
+  
+    .panel {
+      padding-bottom: 15px;
+  
+      border-top: 1px solid #000000;
+  
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 1px solid #000000;
+      }
+  
+      &-trigger {
+        cursor: pointer;
+        margin: 0;
+        padding: 15px 30px 15px 0;
+        position: relative;
+        width: 100%;
+  
+        &::after {
+          $color-text-rgb: red($color-contrast), green($color-contrast), blue($color-contrast);
+  
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline fill='none' stroke='rgb(#{$color-text-rgb})' stroke-width='2' points='2,9 16,25 30,9 '/%3E%3C/svg%3E");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          width: 30px;
+        }
+  
+        &[aria-expanded='true'] {
+          &::after {
+            transform: rotateX(180deg);
+          }
+        }
+      }
+  
+      // do not add margins or padding to this, it will break the layout
+      &-content {
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
+  
+      // add custom paddings here
+      &-inner {
+        padding: 0;
+
+        .box-inner {
+          margin-top: 25px;
+        }
+      }
+    }
+
+  }
+
+  
+}
