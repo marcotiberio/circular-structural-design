@@ -41,7 +41,7 @@ body {
 
 #{$heading-selectors} {
   color: $color-headline;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.45;
   margin-bottom: 0.9rem;
   margin-top: 0;
@@ -53,6 +53,11 @@ body {
     outline: 0;
     text-decoration: none;
   }
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.175;
 }
 
 h1,
@@ -332,10 +337,11 @@ button {
     &:hover,
     &:focus {
       background-color: transparent;
-      color: $color-background-dark;
+      color: $color-text;
+      text-decoration: underline;
 
       &::before {
-        background-color: $color-background-dark;
+        background-color: transparent;
       }
 
       &::after {
@@ -580,11 +586,11 @@ select {
     padding: 0;
 
     @media (min-width: $breakpoint-tablet) {
-      padding: $component-spacing-tablet 0 $component-spacing-tablet 0;
+      padding: 0 0 $component-spacing-tablet 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      padding: $component-spacing-desktop 0 $component-spacing-desktop 0;
+      padding: 0 0 $component-spacing-desktop 0;
     }
   }
 }

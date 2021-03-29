@@ -91,5 +91,12 @@
       margin: 0;
     }
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    .centerMaxWidthContainer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   
 }

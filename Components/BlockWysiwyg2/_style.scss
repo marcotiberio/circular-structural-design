@@ -15,7 +15,8 @@
       text-align: left;
 
       img {
-        width: auto;
+        height: auto;
+        width: 100%;
       }
     }
 
@@ -36,7 +37,15 @@
 
   .centerContentMaxWidth {
     margin-left: 0;
-    max-width: 1000px;
+    max-width: 1440px;
   }
+
+  @media (min-width: $breakpoint-tablet) {
+    .centerMaxWidthContainer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
   
 }

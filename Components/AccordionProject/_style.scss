@@ -35,9 +35,9 @@
       flex-wrap: wrap;
     }
 
-    column-gap: 25px;
+    column-gap: 85px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 2fr;
 
     .preContent {
       max-width: 1440px;
@@ -46,7 +46,7 @@
   
     .accordion {
       @include reset-list;
-      padding-top: (1/4.5) * 100%;
+      padding-top: (1/5) * 100%;
     }
   
     .panel {
@@ -107,7 +107,11 @@
     }
   }
 
-  
+  @media (min-width: $breakpoint-tablet) {
+    .centerMaxWidthContainer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 
-  
 }

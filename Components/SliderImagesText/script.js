@@ -39,8 +39,23 @@ class SliderImagesText extends window.HTMLDivElement {
   initSlider () {
     const { options } = this.props
     const config = {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 60,
+      loop: true,
+      breakpoints: {
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 60
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 60
+        }
+      },
       navigation: {
         nextEl: this.$buttonNext.get(0),
         prevEl: this.$buttonPrev.get(0)
