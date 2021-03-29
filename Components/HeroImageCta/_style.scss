@@ -11,25 +11,42 @@
   .header {
     color: $color-background;
     font-weight: 400;
+    padding-top: 0;
+    position: absolute;
     text-align: center;
+    top: $component-spacing-desktop;
     width: 60%;
+
+    @media (max-width: $breakpoint-tablet) {
+      top: $component-spacing-mobile;
+      width: 100%;
+    }
+
   }
 
   .sub-header {
+    bottom: 0;
     color: $color-background;
     font-weight: 400;
+    position: absolute;
     text-align: center;
     width: 60%;
+
+    @media (max-width: $breakpoint-tablet) {
+      bottom: $component-spacing-tablet;
+      width: 100%;
+    }
+
   }
 
   &:not(.fullWidth) .container {
     @include center(100%, $padding: 0);
-    height: 80%;
+    height: 100%;
     position: relative;
     width: 100%;
 
     @media (min-width: $breakpoint-tablet) {
-      @include center(60vw, $padding: 0);
+      @include center($container-max-width, $padding: 0);
     }
 
     .content-picture {
@@ -75,18 +92,6 @@
       padding: 50px 0;
     }
 
-    &-wrapper {
-      align-content: center;
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-      height: 100%;
-      justify-content: center;
-      justify-items: center;
-      max-width: $content-max-width;
-      width: 100%;
-    }
-
     &-html {
       @include reset-content-margins;
       position: relative;
@@ -110,17 +115,16 @@
       top: 0;
     }
 
-    &-background {
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
     &-pictureEl {
-      height: 100%;
-      width: 100%;
+      height: auto;
+      margin-top: 8%;
+      width: 40%;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-top: -$component-spacing-desktop;
+        width: 80%;
+      }
+
     }
 
     &-image {

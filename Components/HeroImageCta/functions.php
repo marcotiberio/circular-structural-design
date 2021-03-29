@@ -31,7 +31,7 @@ function getACFLayout()
                         'preview_size' => 'medium',
                         'library' => 'all',
                         'mime_types' => 'jpg,jpeg,png',
-                        'required' => 1,
+                        'required' => 0,
                         'instructions' => __('Image-Format: JPG, PNG. Recommended resolution greater than 2048 x 800 px.', 'flynt'),
                     ],
                     [

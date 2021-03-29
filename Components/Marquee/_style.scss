@@ -1,15 +1,12 @@
 [is='marquee'] {
   margin: 0;
-  padding: 120px 0;
+  padding: $component-spacing-desktop 0;
   scroll-margin-top: 0;
 
-  &--white {
-    background-color: #fff !important;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 20px 0;
   }
 
-  &--green {
-    text-align: #7a8d8a !important;
-  }
 
   .container {
     .marquee {
