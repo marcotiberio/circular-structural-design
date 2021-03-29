@@ -577,14 +577,14 @@ select {
 
   &[class*='theme'] {
     margin: 0;
-    padding: $component-spacing-mobile 0;
+    padding: 0;
 
     @media (min-width: $breakpoint-tablet) {
-      padding: $component-spacing-tablet 0;
+      padding: 0 0 $component-spacing-tablet 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      padding: $component-spacing-desktop 0;
+      padding: 0 0 $component-spacing-desktop 0;
     }
   }
 }
