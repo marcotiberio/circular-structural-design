@@ -5,7 +5,7 @@ import 'swiper/swiper-bundle.css'
 
 Swiper.use([Navigation, A11y, Autoplay])
 
-class SliderImages extends window.HTMLDivElement {
+class SliderImagesText extends window.HTMLDivElement {
   constructor (...args) {
     const self = super(...args)
     self.init()
@@ -56,4 +56,4 @@ class SliderImages extends window.HTMLDivElement {
   }
 }
 
-window.customElements.define('flynt-slider-images', SliderImages, { extends: 'div' })
+window.customElements.define('flynt-slider-images-text', SliderImagesText, { extends: 'div' })

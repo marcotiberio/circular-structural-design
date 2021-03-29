@@ -56,6 +56,17 @@
       &:not(.boxPadding) {
         padding: $gutter-width 0;
       }
+
+      .content-link {
+        display: flex;
+        flex-direction: row;
+
+        img {
+          margin-right: 5px;
+          width: 10px;
+        }
+      }
+      
     }
 
     @media (max-width: $breakpoint-tablet-horizontal) {

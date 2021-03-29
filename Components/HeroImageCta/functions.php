@@ -47,13 +47,31 @@ function getACFLayout()
                 ]
             ],
             [
+                'label' => __('Header', 'flynt'),
+                'name' => 'header',
+                'type' => 'text',
+                'required' => 1,
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
+                'label' => __('Sub Header', 'flynt'),
+                'name' => 'subHeader',
+                'type' => 'text',
+                'required' => 1,
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
                 'type' => 'wysiwyg',
                 'tabs' => 'visual,text',
                 'media_upload' => 0,
                 'delay' => 1,
-                'required' => 1,
+                'required' => 0,
                 'instructions' => __('The content overlaying the image. Character Recommendations: Title: 30-100, Content: 80-250.', 'flynt'),
             ],
             [

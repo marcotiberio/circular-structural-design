@@ -1,4 +1,5 @@
 <div class="flyntComponent {{ options.fullWidth == false ? "componentSpacing #{options.theme}" : '' }} {{ options.fullWidth ? 'fullWidth' : '' }}" is="flynt-hero-image-cta">
+  <h1 class="header">{{ header|e }}</h1>
   <div class="container">
     <div class="content-picture">
       <div class="content-background"></div>
@@ -47,12 +48,6 @@
         {% endif %}
       </picture>
     </div>
-    <div class="content">
-      <div class="content-wrapper">
-        <div class="content-html boxPadding">
-          {{ contentHtml|e('wp_kses_post') }}
-        </div>
-      </div>
-    </div>
   </div>
+  <h1 class="sub-header">{{ subHeader|e }}</h1>
 </div>

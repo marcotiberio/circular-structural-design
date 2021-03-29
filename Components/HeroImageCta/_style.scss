@@ -4,15 +4,32 @@
   @include align-image('mobile');
   align-items: center;
   display: flex;
+  flex-direction: column;
+  height: 100vh;
   justify-content: center;
+
+  .header {
+    color: $color-background;
+    font-weight: 400;
+    text-align: center;
+    width: 60%;
+  }
+
+  .sub-header {
+    color: $color-background;
+    font-weight: 400;
+    text-align: center;
+    width: 60%;
+  }
 
   &:not(.fullWidth) .container {
     @include center(100%, $padding: 0);
+    height: 80%;
     position: relative;
     width: 100%;
 
     @media (min-width: $breakpoint-tablet) {
-      @include center($container-max-width, $padding: 0);
+      @include center(60vw, $padding: 0);
     }
 
     .content-picture {

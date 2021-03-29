@@ -12,7 +12,7 @@
                 <div class="content-inner">
                   {{ item.contentHtml|e('wp_kses_post') }}
                   {% if item.linkText and item.linkUrl %}
-                    <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">→ {{ item.linkText|e }}</a>
+                    <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank"><img src="/wp-content/uploads/2021/03/arrow-right.svg">{{ item.linkText|e }}</a>
                   {% endif %}
                 </div>
               {% endif %}

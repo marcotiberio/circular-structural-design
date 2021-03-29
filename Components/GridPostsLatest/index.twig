@@ -27,13 +27,13 @@
                     {{ item.thumbnail.src|resizeDynamic(312, 208) }} 312w"
                   data-sizes="auto"
                   alt="{{ item.thumbnail.alt|e }}">
-                <div class="slide-toggle"><p>Show</p></div>
-                <div class="content-inner boxPadding">
-                  <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p>
+                <button class="panel-trigger p" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}"></button>
+                <div class="content-inner boxPadding" aria-hidden="true">
+                  <p class="content-excerpt">{{ item.preview.read_more(false) }}</p>
+                  <footer class="content-footer">
+                    <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ item.link }}</a>
+                  </footer>
                 </div>
-              <footer class="content-footer" style="display: none;">
-                <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
-              </footer>
             </div>
           </li>
         {% endfor %}

@@ -27,6 +27,13 @@ function getACFLayout()
                 ]
             ],
             [
+                'label' => __('Header', 'flynt'),
+                'name' => 'header',
+                'type' => 'text',
+                'delay' => 1,
+                'required' => 0,
+            ],
+            [
                 'label' => __('Content Left', 'flynt'),
                 'name' => 'contentHtmlSx',
                 'type' => 'wysiwyg',
@@ -39,7 +46,7 @@ function getACFLayout()
                 'name' => 'contentHtmlDx',
                 'type' => 'wysiwyg',
                 'delay' => 1,
-                'media_upload' => 0,
+                'media_upload' => 1,
                 'required' => 1,
             ],
             [

@@ -343,31 +343,31 @@ button {
       }
     }
 
-    &::before {
-      background-color: $color-accent;
-      bottom: 0;
-      content: '';
-      height: 1px;
-      left: 0;
-      position: absolute;
-      transition: background-color 0.2s ease-out;
-      width: 100%;
-    }
+    // &::before {
+    //   background-color: $color-accent;
+    //   bottom: 0;
+    //   content: '';
+    //   height: 1px;
+    //   left: 0;
+    //   position: absolute;
+    //   transition: background-color 0.2s ease-out;
+    //   width: 100%;
+    // }
 
-    &::after {
+    &::before {
       $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
       $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
 
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.586 5L.293 8.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4A1 1 0 1 0 .293 1.707L3.586 5z' fill='rgb(#{$color-accent-rgb})'/%3E%3Cpath d='M13.586 5l-3.293 3.293a1 1 0 0 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 5z' fill='rgb(#{$color-background-dark-rgb})'/%3E%3C/svg%3E");
+      background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
       background-position: left center;
       background-repeat: no-repeat;
       content: '';
       display: inline-block;
-      height: 10px;
-      margin-left: 10px;
+      height: 20px;
+      margin-left: 0;
       transition: background-position 0.2s ease-out;
       vertical-align: baseline;
-      width: 6px;
+      width: 25px;
     }
   }
 }
@@ -609,8 +609,8 @@ select {
 .preContent {
   @include reset-content-margins;
   margin: 0 auto 32px;
-  max-width: $content-max-width;
-  text-align: center;
+  max-width: $container-max-width;
+  text-align: left;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: $container-padding-tablet;

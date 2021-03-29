@@ -1,11 +1,11 @@
 <?php
 
-namespace Flynt\Components\SliderImages;
+namespace Flynt\Components\SliderImagesText;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 
-add_filter('Flynt/addComponentData?name=SliderImages', function ($data) {
+add_filter('Flynt/addComponentData?name=SliderImagesText', function ($data) {
     $translatableOptions = Options::getTranslatable('SliderOptions');
     $data['jsonData'] = [
         'options' => array_merge($translatableOptions, $data['options']),
@@ -16,8 +16,8 @@ add_filter('Flynt/addComponentData?name=SliderImages', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'sliderImages',
-        'label' => 'Slider: Images',
+        'name' => 'SliderImagesText',
+        'label' => 'Slider: Images+Text',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -63,17 +63,25 @@ function getACFLayout()
                             'width' => 60
                         ],
                     ],
+                    [
+                        'label' => __('Link Text', 'flynt'),
+                        'name' => 'linkText',
+                        'type' => 'text',
+                        'delay' => 1,
+                        'wrapper' => [
+                            'width' => 50
+                        ],
+                    ],
+                    [
+                        'label' => __('Link URL', 'flynt'),
+                        'name' => 'linkUrl',
+                        'type' => 'text',
+                        'delay' => 1,
+                        'wrapper' => [
+                            'width' => 50
+                        ],
+                    ]
                 ],
-            ],
-            [
-                'label' => __('Images', 'flynt'),
-                'name' => 'images',
-                'type' => 'gallery',
-                'min' => 2,
-                'preview_size' => 'medium',
-                'mime_types' => 'jpg,jpeg,png',
-                'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
-                'required' => 1
             ],
             [
                 'label' => __('Options', 'flynt'),

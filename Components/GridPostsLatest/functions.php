@@ -136,7 +136,7 @@ Options::addTranslatable('GridPostsLatest', [
                 'wrapper' => [
                     'width' => 50
                 ],
-            ]
+            ],
         ],
     ]
 ]);

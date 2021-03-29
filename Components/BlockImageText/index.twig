@@ -36,7 +36,7 @@
           <h1 class="header">{{ header|e }}</h1>
         {% endif %}
         {% if linkText and linkUrl %}
-          <a class="content-link" href="{{ linkUrl|e }}" target="_blank">→ {{ linkText|e }}</a>
+          <a class="content-link" href="{{ linkUrl|e }}" target="_blank">{{ linkText|e }}</a>
         {% endif %}
       </div>
     </div>
