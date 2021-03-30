@@ -11,6 +11,7 @@
       flex-direction: row-reverse;
       justify-content: flex-end;
       padding-right: 160px;
+      place-items: center;
     }
 
     .menu {
@@ -29,6 +30,10 @@
 
     @media (min-width: $breakpoint-tablet) {
       margin: 0;
+    }
+
+    p {
+      font-size: 0.8rem;
     }
   }
 

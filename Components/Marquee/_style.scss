@@ -1,6 +1,6 @@
 [is='marquee'] {
   margin: 0;
-  padding: $component-spacing-desktop 0;
+  padding: $component-spacing-desktop 0 0 0;
   scroll-margin-top: 0;
 
   @media (max-width: $breakpoint-tablet) {

@@ -585,12 +585,16 @@ select {
     margin: 0;
     padding: 0;
 
+    @media (max-width: $breakpoint-tablet) {
+      padding: $component-spacing-tablet 0;
+    }
+
     @media (min-width: $breakpoint-tablet) {
-      padding: 0 0 $component-spacing-tablet 0;
+      padding: $component-spacing-tablet 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      padding: 0 0 $component-spacing-desktop 0;
+      padding: $component-spacing-desktop 0;
     }
   }
 }
@@ -603,7 +607,7 @@ select {
   }
 
   @media (min-width: $breakpoint-desktop) {
-    @include center($padding: $container-padding-desktop);
+    @include center($padding: $container-padding-tablet);
   }
 }
 

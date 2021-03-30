@@ -32,6 +32,7 @@ class NavigationBurger extends window.HTMLElement {
 
   triggerMenu (e) {
     this.$.toggleClass('flyntComponent-menuIsOpen')
+    this.$linkButton.toggleClass('test')
     this.$menuButton.attr('aria-expanded', this.$menuButton.attr('aria-expanded') === 'false' ? 'true' : 'false')
     if (this.$.hasClass('flyntComponent-menuIsOpen')) {
       disableBodyScroll(this.$menu.get(0))
