@@ -23,7 +23,7 @@ function getACFLayout()
                 'type' => 'button_group',
                 'choices' => [
                     '#fff' => '#fff',
-                    '#7a8d8a' => '#7a8d8a'
+                    '#beccca' => '#beccca'
                 ]
             ],
             [
@@ -32,6 +32,7 @@ function getACFLayout()
                 'type' => 'text',
                 'delay' => 1,
                 'required' => 0,
+                'instructions' => __('Please write tour Marquee title with no capilization.', 'flynt')
             ],
             [
                 'label' => __('Options', 'flynt'),

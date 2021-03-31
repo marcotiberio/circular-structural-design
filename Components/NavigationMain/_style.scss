@@ -49,15 +49,15 @@
 
     // }
 
-    @keyframes ckw {
-      0% {
-        transform: rotate(0deg);
-      }
+    // @keyframes ckw {
+    //   0% {
+    //     transform: rotate(0deg);
+    //   }
 
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+    //   100% {
+    //     transform: rotate(360deg);
+    //   }
+    // }
 
   }
 
@@ -94,6 +94,10 @@
       &:hover,
       &:focus {
         color: $color-accent;
+      }
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        padding: 7px 10px;
       }
     }
   }

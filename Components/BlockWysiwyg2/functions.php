@@ -32,6 +32,7 @@ function getACFLayout()
                 'type' => 'text',
                 'delay' => 1,
                 'required' => 0,
+                'instructions' => __('Header is optional.', 'flynt')
             ],
             [
                 'label' => __('Content Left', 'flynt'),
@@ -48,6 +49,7 @@ function getACFLayout()
                 'delay' => 1,
                 'media_upload' => 1,
                 'required' => 0,
+                'instructions' => __('Content right is optional.', 'flynt')
             ],
             [
                 'label' => __('Options', 'flynt'),

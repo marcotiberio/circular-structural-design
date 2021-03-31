@@ -15,6 +15,11 @@
     @include reset-content-margins;
     font-size: 0.8rem;
     padding-bottom: $container-padding-mobile;
+
+    p {
+      font-size: 1.125rem;
+    }
+    
   }
 
   &.cookieNotice--isVisible {

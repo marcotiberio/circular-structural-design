@@ -52,9 +52,14 @@ class SliderImagesText extends window.HTMLDivElement {
           spaceBetween: 60
         },
         1024: {
+          slidesPerView: 2,
+          spaceBetween: 60
+        },
+        1280: {
           slidesPerView: 4,
           spaceBetween: 60
-        }
+        },
+
       },
       navigation: {
         nextEl: this.$buttonNext.get(0),

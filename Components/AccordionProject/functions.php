@@ -75,10 +75,11 @@ function getACFLayout()
                     [
                         'label' => __('Link URL', 'flynt'),
                         'name' => 'linkUrl',
-                        'type' => 'text',
+                        'type' => 'link',
+                        'return_format' => 'url',
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 50
+                            'width' => 20
                         ],
                     ],
                     [

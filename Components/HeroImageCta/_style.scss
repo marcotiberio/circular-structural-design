@@ -19,7 +19,7 @@
 
     @media (max-width: $breakpoint-tablet) {
       top: $component-spacing-mobile;
-      width: 100%;
+      width: 80%;
     }
 
   }
@@ -33,6 +33,11 @@
     width: 60%;
 
     @media (max-width: $breakpoint-tablet) {
+      bottom: $component-spacing-tablet;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
       bottom: $component-spacing-tablet;
       width: 100%;
     }
@@ -58,7 +63,7 @@
         right: $container-padding-tablet;
       }
 
-      @media (min-width: $breakpoint-desktop) {
+      @media (min-width: $breakpoint-tablet-horizontal) {
         left: $container-padding-desktop;
         right: $container-padding-desktop;
       }
@@ -121,6 +126,11 @@
       width: 45%;
 
       @media (max-width: $breakpoint-tablet) {
+        margin-top: -$component-spacing-desktop;
+        width: 80%;
+      }
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
         margin-top: -$component-spacing-desktop;
         width: 80%;
       }

@@ -43,7 +43,7 @@ function getACFLayout()
                 'required' => 1,
                 'mime_types' => 'jpg,jpeg,png,svg',
                 'wrapper' => [
-                    'width' => 30
+                    'width' => 50
                 ],
             ],
             [
@@ -51,7 +51,7 @@ function getACFLayout()
                 'name' => 'header',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => 20
+                    'width' => 50
                 ],
             ],
             [
@@ -60,16 +60,17 @@ function getACFLayout()
                 'type' => 'text',
                 'delay' => 1,
                 'wrapper' => [
-                    'width' => 20
+                    'width' => 50
                 ],
             ],
             [
                 'label' => __('Link URL', 'flynt'),
                 'name' => 'linkUrl',
-                'type' => 'text',
+                'type' => 'link',
+                'return_format' => 'url',
                 'delay' => 1,
                 'wrapper' => [
-                    'width' => 20
+                    'width' => 50
                 ],
             ],
             [
