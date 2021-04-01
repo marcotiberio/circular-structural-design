@@ -1,0 +1,37 @@
+[is='title'] {
+  margin: 0 auto;
+  padding: $component-spacing-desktop 0 0 0;
+  scroll-margin-top: 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $component-spacing-desktop 0 0 0;
+  }
+
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      padding-left: $container-padding-tablet;
+      padding-right: $container-padding-tablet;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      padding-left: $container-padding-tablet;
+      padding-right: $container-padding-tablet;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding-left: $container-padding-mobile;
+      padding-right: $container-padding-mobile;
+    }
+    
+    .sectionTitle {
+      margin-bottom: 0;
+      padding-top: 0;
+      text-transform: uppercase;
+    }
+
+  }
+}

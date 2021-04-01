@@ -6,7 +6,7 @@ function getACFLayout()
 {
     return [
         'name' => 'blockCollapse',
-        'label' => 'Block: Collapse',
+        'label' => 'Collapse',
         'sub_fields' => [
             [
                 [

@@ -25,8 +25,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridPostsLatest\getACFLayout(),
                     Components\HeroImageCta\getACFLayout(),
                     Components\ListArticle\getACFLayout(),
-                    Components\Marquee\getACFLayout(),
                     Components\SliderImagesText\getACFLayout(),
+                    Components\Title\getACFLayout(),
                 ]
             ]
         ],

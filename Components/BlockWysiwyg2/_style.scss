@@ -1,14 +1,16 @@
 [is='flynt-block-wysiwyg2'] {
-
   height: auto;
-  
+
+  .preContent {
+    text-transform: uppercase;
+  }
+
   .content {
     @include reset-content-margins;
 
     column-gap: 140px;
     display: grid;
     grid-template-columns: 1fr;
-    
     text-align: inherit;
 
     &--textLeft {
@@ -46,6 +48,4 @@
       // padding-right: 0;
     }
   }
-  
-  
 }

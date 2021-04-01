@@ -58,7 +58,7 @@ class SliderImagesText extends window.HTMLDivElement {
         1280: {
           slidesPerView: 4,
           spaceBetween: 60
-        },
+        }
 
       },
       navigation: {
