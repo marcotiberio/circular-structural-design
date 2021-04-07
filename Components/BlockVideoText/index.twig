@@ -1,0 +1,18 @@
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-block-video-text">
+  <div class="container">
+    <div class="box box--{{ imagePosition }}">
+      <div class="box-inner box-inner--content">
+        {{ contentHtml|e('wp_kses_post') }}
+      </div>
+      <div class="box-inner box-inner--video">
+        {% include 'Partials/_video.twig' ignore missing with {video: video, image: posterImage} only %}
+        {% if header %}
+          <h1 class="header">{{ header|e }}</h1>
+        {% endif %}
+        {% if linkText and linkUrl %}
+          <a class="content-link" href="{{ linkUrl|e }}" target="_blank">{{ linkText|e }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

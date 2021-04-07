@@ -9,32 +9,27 @@
     <div data-slider class="slider swiper-container themeLight">
       <div class="swiper-wrapper">
         {% for item in items %}
-          {% if item.image or item.contentHtml %}
+          {% if item.image %}
             <div class="slider-item swiper-slide">
               {% if item.image %}
-                  <img class="content-image lazyload"
-                    src="{{ item.image.src|resizeDynamic(424, 283) }}"
-                    srcset="{{ placeholderImage(3, 2) }}"
-                    data-srcset="
-                      {{ item.image.src|resizeDynamic(1920, 1280) }} 1920w,
-                      {{ item.image.src|resizeDynamic(1320, 880) }} 1320w,
-                      {{ item.image.src|resizeDynamic(1280, 853) }} 1280w,
-                      {{ item.image.src|resizeDynamic(1050, 700) }} 1050w,
-                      {{ item.image.src|resizeDynamic(750, 500) }} 750w,
-                      {{ item.image.src|resizeDynamic(600, 400) }} 600w,
-                      {{ item.image.src|resizeDynamic(424, 283) }} 424w,
-                      {{ item.image.src|resizeDynamic(312, 208) }} 312w"
-                    data-sizes="auto"
-                    alt="{{ item.image.alt|e }}">
-                {% endif %}
-                {% if item.contentHtml %}
-                  <div class="content-inner {{ options.card == 'layoutCard' ? 'boxPadding' }}">
-                    {{ item.contentHtml|e('wp_kses_post') }}
-                    {% if item.linkText and item.linkUrl %}
-                      <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">{{ item.linkText|e }}</a>
-                    {% endif %}
-                  </div>
-                {% endif %}
+                <img class="content-image lazyload"
+                  src="{{ item.image.src|resizeDynamic(424, 283) }}"
+                  srcset="{{ placeholderImage(3, 2) }}"
+                  data-srcset="
+                    {{ item.image.src|resizeDynamic(1920, 1280) }} 1920w,
+                    {{ item.image.src|resizeDynamic(1320, 880) }} 1320w,
+                    {{ item.image.src|resizeDynamic(1280, 853) }} 1280w,
+                    {{ item.image.src|resizeDynamic(1050, 700) }} 1050w,
+                    {{ item.image.src|resizeDynamic(750, 500) }} 750w,
+                    {{ item.image.src|resizeDynamic(600, 400) }} 600w,
+                    {{ item.image.src|resizeDynamic(424, 283) }} 424w,
+                    {{ item.image.src|resizeDynamic(312, 208) }} 312w"
+                  data-sizes="auto"
+                  alt="{{ item.image.alt|e }}">
+              {% endif %}
+              {% if item.linkText and item.linkUrl %}
+                <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">{{ item.linkText|e }}</a>
+              {% endif %}
             </div>
           {% endif %}
         {% endfor %}

@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-class BlockVideoText extends window.HTMLDivElement {
+class BlockVideoOembed extends window.HTMLDivElement {
   constructor (...args) {
     const self = super(...args)
     self.init()
@@ -42,4 +42,4 @@ class BlockVideoText extends window.HTMLDivElement {
   }
 }
 
-window.customElements.define('flynt-block-video-text', BlockVideoText, { extends: 'div' })
+window.customElements.define('flynt-block-video-oembed', BlockVideoOembed, { extends: 'div' })

@@ -1,4 +1,31 @@
-[is='flynt-block-image-text'] {
+[is='flynt-block-video-text'] {
+  @import 'Partials/video';
+
+  &.flyntComponent--sizeSmall {
+    .video {
+      max-width: 375px;
+    }
+  }
+
+  &.flyntComponent--sizeMedium {
+    .video {
+      max-width: $content-max-width;
+    }
+  }
+
+  &.flyntComponent--sizeLarge {
+    .video {
+      max-width: 800px;
+    }
+  }
+
+  &.flyntComponent--sizeFull {
+    .figure-caption {
+      margin-left: 0.625rem;
+    }
+  }
+
+
   .container {
     @include center(600px + 2 * $container-padding-mobile);
   }
@@ -18,8 +45,31 @@
 
     a {
       color: $color-accent;
-      display: inline;
+      display: flex;
+      place-items: center;
       transition: color 0.2s ease-out;
+
+      &:hover,
+      &:focus {
+        color: darken($color-accent, 10%);
+      }
+
+      &::before {
+        $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
+        $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
+
+        background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
+        background-position: left center;
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        margin-left: 0;
+        transition: background-position 0.2s ease-out;
+        vertical-align: baseline;
+        width: 25px;
+      }
+
     }
 
     .box {
@@ -33,7 +83,7 @@
         width: 40%;
       }
 
-      &-inner--image {
+      &-inner--video {
         @include reset-content-margins('both');
         padding: 0 $container-padding-tablet;
         width: 60%;

@@ -4,16 +4,16 @@
     display: flex;
     place-items: center;
     transition: color 0.2s ease-out;
-  
+
     &:hover,
     &:focus {
       color: darken($color-accent, 10%);
     }
-  
+
     &::before {
       $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
       $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
-  
+
       background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
       background-position: left center;
       background-repeat: no-repeat;
@@ -25,9 +25,9 @@
       vertical-align: baseline;
       width: 25px;
     }
-    
+
   }
-  
+
   .container {
     @media (max-width: $breakpoint-tablet-horizontal - 1) {
       display: flex;
@@ -43,31 +43,32 @@
       max-width: 1440px;
       text-align: left;
     }
-  
+
     .accordion {
       @include reset-list;
       padding-top: (1/5) * 100%;
     }
-  
+
     .panel {
       border-top: 1px solid #000;
       padding-bottom: 15px;
-  
+
       &:last-child {
         border-bottom: 1px solid #000;
         padding-bottom: 0;
       }
-  
+
       &-trigger {
         cursor: pointer;
+        font-size: 1.25rem;
         margin: 0;
         padding: 15px 30px 15px 0;
         position: relative;
         width: 100%;
-  
+
         &::after {
           $color-text-rgb: red($color-contrast), green($color-contrast), blue($color-contrast);
-  
+
           background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
           background-position: center;
           background-repeat: no-repeat;
@@ -81,21 +82,21 @@
           transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
           width: 20px;
         }
-  
+
         &[aria-expanded='true'] {
           &::after {
             transform: rotate(90deg);
           }
         }
       }
-  
+
       // do not add margins or padding to this, it will break the layout
       &-content {
         display: none;
         margin: 0;
         padding: 0;
       }
-  
+
       // add custom paddings here
       &-inner {
         padding: 0;

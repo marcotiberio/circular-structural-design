@@ -18,6 +18,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\AccordionProject\getACFLayout(),
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockVideoText\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwyg2\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),

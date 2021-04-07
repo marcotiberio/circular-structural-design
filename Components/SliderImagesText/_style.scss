@@ -1,6 +1,6 @@
 [is='flynt-slider-images-text'] {
   // margin-top: 0;
-  
+
   .slider {
     max-width: 100%;
     position: relative;
@@ -21,16 +21,16 @@
         display: flex;
         place-items: center;
         transition: color 0.2s ease-out;
-      
+
         &:hover,
         &:focus {
           color: darken($color-accent, 10%);
         }
-      
+
         &::before {
           $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
           $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
-      
+
           background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
           background-position: left center;
           background-repeat: no-repeat;
@@ -42,7 +42,7 @@
           vertical-align: baseline;
           width: 25px;
         }
-        
+
       }
 
       img {
