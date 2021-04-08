@@ -600,6 +600,7 @@ select {
     }
 
     @media (min-width: $breakpoint-desktop) {
+      min-height: calc(100vh - 178px);
       padding: $component-spacing-desktop 0;
     }
   }
@@ -614,6 +615,18 @@ select {
 
   @media (min-width: $breakpoint-desktop) {
     @include center($padding: $container-padding-tablet);
+  }
+}
+
+.centerMaxWidthContainerNav {
+  @include centernav;
+
+  @media (min-width: $breakpoint-tablet) {
+    @include centernav($padding: $container-padding-tablet);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @include centernav($padding: $container-padding-tablet);
   }
 }
 

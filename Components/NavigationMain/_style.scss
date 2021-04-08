@@ -65,7 +65,7 @@
     @include reset-list;
     align-items: center;
     display: flex;
-    margin-right: -18px;
+    margin-right: -38px;
     padding-left: 36px;
 
     &-item--current {
@@ -74,12 +74,12 @@
       }
     }
 
-    &-item:nth-last-child(1),
-    &-item:nth-last-child(2) {
-      .menu-link {
-        padding: 7px 10px;
-      }
-    }
+    // &-item:nth-last-child(1),
+    // &-item:nth-last-child(2) {
+    //   .menu-link {
+    //     padding: 7px 40px;
+    //   }
+    // }
 
     &-link {
       color: $color-text;
