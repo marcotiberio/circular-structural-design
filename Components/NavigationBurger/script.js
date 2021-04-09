@@ -47,6 +47,7 @@ class NavigationBurger extends window.HTMLElement {
   hideMenu (e) {
     console.log('hideMenu')
     this.$.toggleClass('flyntComponent-menuIsOpen')
+    enableBodyScroll(this.$menu.get(0))
   }
 }
 
