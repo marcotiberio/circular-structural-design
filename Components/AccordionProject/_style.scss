@@ -106,6 +106,28 @@
         }
       }
     }
+
+    // .panel:first-child {
+
+    //   div {
+    //     display: block;
+    //   }
+
+    //   .panel-trigger {
+
+    //     &[aria-expanded='false'] {
+    //       &::after {
+    //         transform: rotate(90deg);
+    //       }
+    //     }
+
+    //     &[aria-expanded='true'] {
+    //       &::after {
+    //         transform: rotate(0deg);
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   @media (min-width: $breakpoint-tablet) {

@@ -21,6 +21,11 @@ class AccordionProject extends window.HTMLDivElement {
     this.$.on('click', '[aria-controls]', this.togglePanel)
   }
 
+  resolveElements () {
+    this.$button = $('.panel-trigger', this)
+    this.$content = $('.panel-content', this)
+  }
+
   togglePanel (e) {
     const $panel = $(e.currentTarget)
 

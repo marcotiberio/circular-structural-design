@@ -1,6 +1,6 @@
 [is='flynt-block-image-text'] {
   .container {
-    @include center(600px + 2 * $container-padding-mobile);
+    @include center($container-max-width / 2);
   }
 
   .box-inner {
