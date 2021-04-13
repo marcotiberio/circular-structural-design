@@ -9,6 +9,7 @@ class AccordionProject extends window.HTMLDivElement {
 
   init () {
     this.$ = $(this)
+    this.$button = $('.panel-trigger')
     this.bindFunctions()
     this.bindEvents()
   }
@@ -31,10 +32,10 @@ class AccordionProject extends window.HTMLDivElement {
 
     if ($panel.attr('aria-expanded') === 'true') {
       $panel.attr('aria-expanded', 'false')
-      $panel.next().attr('aria-hidden', 'true').slideUp()
+      $panel.next().slideToggle('fast')
     } else {
       $panel.attr('aria-expanded', 'true')
-      $panel.next().attr('aria-hidden', 'false').slideDown()
+      $panel.next().slideToggle('fast')
     }
   }
 }

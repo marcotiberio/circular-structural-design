@@ -95,6 +95,12 @@
         display: none;
         margin: 0;
         padding: 0;
+
+        &-open {
+          display: block;
+          margin: 0;
+          padding: 0;
+        }
       }
 
       // add custom paddings here
@@ -107,27 +113,25 @@
       }
     }
 
-    // .panel:first-child {
+    .panel:first-child {
+      .panel-content {
+        display: block;
+      }
 
-    //   div {
-    //     display: block;
-    //   }
+      .panel-trigger {
+        &[aria-expanded='false'] {
+          &::after {
+            transform: rotate(90deg);
+          }
+        }
 
-    //   .panel-trigger {
-
-    //     &[aria-expanded='false'] {
-    //       &::after {
-    //         transform: rotate(90deg);
-    //       }
-    //     }
-
-    //     &[aria-expanded='true'] {
-    //       &::after {
-    //         transform: rotate(0deg);
-    //       }
-    //     }
-    //   }
-    // }
+        &[aria-expanded='true'] {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
   }
 
   @media (min-width: $breakpoint-tablet) {

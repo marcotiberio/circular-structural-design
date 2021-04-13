@@ -49,18 +49,7 @@ function getACFLayout()
                         'name' => 'panelTitle',
                         'type' => 'text',
                         'wrapper' => [
-                            'width' => 50
-                        ],
-                    ],
-                    [
-                        'label' => __('Panel Content', 'flynt'),
-                        'name' => 'panelContent',
-                        'type' => 'wysiwyg',
-                        'tabs' => 'visual,text',
-                        'media_upload' => 0,
-                        'delay' => 1,
-                        'wrapper' => [
-                            'width' => 50
+                            'width' => 25
                         ],
                     ],
                     [
@@ -69,7 +58,7 @@ function getACFLayout()
                         'type' => 'text',
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 50
+                            'width' => 25
                         ],
                     ],
                     [
@@ -79,7 +68,7 @@ function getACFLayout()
                         'return_format' => 'url',
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 20
+                            'width' => 25
                         ],
                     ],
                     [
@@ -90,6 +79,20 @@ function getACFLayout()
                         'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
                         'required' => 1,
                         'mime_types' => 'jpg,jpeg,png,svg',
+                        'wrapper' => [
+                            'width' => 25
+                        ],
+                    ],
+                    [
+                        'label' => __('Panel Content', 'flynt'),
+                        'name' => 'panelContent',
+                        'type' => 'wysiwyg',
+                        'tabs' => 'visual,text',
+                        'media_upload' => 0,
+                        'delay' => 1,
+                        'wrapper' => [
+                            'width' => 100
+                        ],
                     ],
                 ],
             ],
