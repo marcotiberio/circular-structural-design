@@ -9,9 +9,14 @@ class AccordionProject extends window.HTMLDivElement {
 
   init () {
     this.$ = $(this)
-    this.$button = $('.panel-trigger')
+    this.resolveElements()
     this.bindFunctions()
     this.bindEvents()
+  }
+
+  resolveElements () {
+    this.$button = $('.panel-trigger', this)
+    this.$content = $('.panel-content', this)
   }
 
   bindFunctions () {
@@ -20,11 +25,6 @@ class AccordionProject extends window.HTMLDivElement {
 
   bindEvents () {
     this.$.on('click', '[aria-controls]', this.togglePanel)
-  }
-
-  resolveElements () {
-    this.$button = $('.panel-trigger', this)
-    this.$content = $('.panel-content', this)
   }
 
   togglePanel (e) {

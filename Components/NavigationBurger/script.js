@@ -10,10 +10,15 @@ class NavigationBurger extends window.HTMLElement {
 
   init () {
     this.$ = $(this)
-    this.$menuItem = $('.menu-item')
+    this.resolveElements()
     this.bindFunctions()
     this.bindEvents()
-    this.resolveElements()
+  }
+
+  resolveElements () {
+    this.$menu = $('.menu', this)
+    this.$menuButton = $('.hamburger', this)
+    this.$menuItem = $('.menu-item', this)
   }
 
   bindFunctions () {
@@ -24,12 +29,6 @@ class NavigationBurger extends window.HTMLElement {
   bindEvents () {
     this.$.on('click', '[data-toggle-menu]', this.triggerMenu)
     this.$menuItem.on('click', this.hideMenu)
-  }
-
-  resolveElements () {
-    this.$menu = $('.menu', this)
-    this.$menuButton = $('.hamburger', this)
-    this.$menuItem = $('.menu-item', this)
   }
 
   connectedCallback () {}
@@ -45,7 +44,6 @@ class NavigationBurger extends window.HTMLElement {
   }
 
   hideMenu (e) {
-    console.log('hideMenu')
     this.$.toggleClass('flyntComponent-menuIsOpen')
     enableBodyScroll(this.$menu.get(0))
   }
