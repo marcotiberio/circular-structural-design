@@ -71,6 +71,16 @@ function getBlockFormats($blockFormats)
 function getConfig()
 {
     return [
+        'colorformats' => [
+            '#fff', 'White',
+            '#000', 'Black',
+            '#993300', 'Burnt orange',
+            '#333300', 'Dark olive',
+            '#003300', 'Dark green',
+            '#003366', 'Dark azure',
+            '#000080', 'Navy Blue',
+            '#333399', 'Indigo'
+        ],
         'blockformats' => [
             'Paragraph' => 'p',
             'Heading 1' => 'h1',
@@ -160,6 +170,7 @@ function getConfig()
                 [
                     'formatselect',
                     'styleselect',
+                    'forecolor',
                     'bold',
                     'italic',
                     'strikethrough',
@@ -175,8 +186,7 @@ function getConfig()
                     'removeformat',
                     '|',
                     'undo',
-                    'redo',
-                    'fullscreen'
+                    'redo'
                 ]
             ],
             'basic' => [

@@ -1,31 +1,8 @@
 [is='flynt-accordion-project'] {
   a {
     color: $color-accent;
-    display: flex;
-    place-items: center;
+    display: inline;
     transition: color 0.2s ease-out;
-
-    &:hover,
-    &:focus {
-      color: darken($color-accent, 10%);
-    }
-
-    &::before {
-      $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
-      $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
-
-      background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
-      background-position: left center;
-      background-repeat: no-repeat;
-      content: '';
-      display: inline-block;
-      height: 20px;
-      margin-left: 0;
-      transition: background-position 0.2s ease-out;
-      vertical-align: baseline;
-      width: 25px;
-    }
-
   }
 
   .container {
