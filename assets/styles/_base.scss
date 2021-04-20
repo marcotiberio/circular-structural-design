@@ -40,6 +40,10 @@ body {
 * Styling all likely used content flow elements.
 */
 
+.showshowshow {
+  display: block;
+}
+
 #{$heading-selectors} {
   color: $color-headline;
   font-weight: 400;

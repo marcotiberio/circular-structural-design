@@ -45,6 +45,11 @@
     max-width: 675px;
     padding: $gutter-width 0 0 $gutter-width;
     width: 100%;
+
+    .content-inner {
+      display: none;
+    }
+
   }
 
   .content {
@@ -60,7 +65,6 @@
     &-inner {
       @include reset-content-margins;
       color: $color-text;
-      // display: none;
       flex-grow: 1;
 
       #{$heading-selectors} {
@@ -102,17 +106,6 @@
           }
         }
       }
-    }
-  }
-
-  .slide-toggle {
-    border-bottom: 1px solid #000;
-    display: grid;
-    padding: 5px 5px 0;
-    place-items: flex-end;
-
-    p {
-      margin: 0;
     }
   }
 

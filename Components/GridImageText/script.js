@@ -9,13 +9,8 @@ class GridImageText extends window.HTMLElement {
 
   init () {
     this.$ = $(this)
-    this.resolveElements()
+    this.bindFunctions()
     this.bindEvents()
-  }
-
-  resolveElements () {
-    this.$button = $('.panel-trigger', this)
-    this.$content = $('.content-inner', this)
   }
 
   bindFunctions () {
@@ -23,7 +18,7 @@ class GridImageText extends window.HTMLElement {
   }
 
   bindEvents () {
-    this.$.on('click', '[aria-controls]', this.togglePanel)
+    this.$.on('click', this.togglePanel)
   }
 
   togglePanel (e) {
@@ -31,10 +26,10 @@ class GridImageText extends window.HTMLElement {
 
     if ($panel.attr('aria-expanded') === 'true') {
       $panel.attr('aria-expanded', 'false')
-      $panel.next().slideToggle('fast')
+      $panel.next().attr('aria-hidden', 'true').slideUp()
     } else {
       $panel.attr('aria-expanded', 'true')
-      $panel.next().slideToggle('fast')
+      $panel.next().attr('aria-hidden', 'false').slideDown()
     }
   }
 }

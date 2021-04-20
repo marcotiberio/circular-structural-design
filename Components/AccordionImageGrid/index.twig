@@ -1,0 +1,49 @@
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-accordion-image-grid">
+  <div class="container centerMaxWidthContainerNav">
+    <div class="content">
+      <ul class="accordion">
+        {% for panel in accordionPanels %}
+          <li class="panel">
+            <h3>{{ panel.panelTitle|e }}</h3>
+            <div class="box-inner box-inner--image">
+            <figure class="figure">
+              {% if panel.image.post_mime_type == 'image/svg+xml' %}
+                <img
+                  class="image lazyload"
+                  src="{{ placeholderImage(500, (500 * 0.75)|round) }}"
+                  data-src="{{ panel.image.src }}"
+                  alt="{{ panel.image.alt|e }}">
+              {% else %}
+                <img class="figure-image lazyload"
+                  src="{{ panel.image.src|resizeDynamic(500) }}"
+                  srcset="{{ placeholderImage(500, 500 / panel.image.aspect) }}"
+                  data-srcset="
+                    {{ panel.image.src|resizeDynamic(1920, 1280) }} 1920w,
+                    {{ panel.image.src|resizeDynamic(1320, 880) }} 1320w,
+                    {{ panel.image.src|resizeDynamic(1280, 853) }} 1280w,
+                    {{ panel.image.src|resizeDynamic(1050, 700) }} 1050w,
+                    {{ panel.image.src|resizeDynamic(750, 500) }} 750w,
+                    {{ panel.image.src|resizeDynamic(600, 400) }} 600w,
+                    {{ panel.image.src|resizeDynamic(424, 283) }} 424w,
+                    {{ panel.image.src|resizeDynamic(312, 208) }} 312w"
+                  data-sizes="auto"
+                  alt="{{ panel.image.alt|e }}">
+                {% endif %}
+            </figure>
+          </div>
+            <button class="panel-trigger p" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}">
+            </button>
+            <div class="panel-content boxPadding" aria-hidden="true" id="content-{{ loop.index }}">
+              <div class="panel-inner">
+                {{ panel.panelContent|e('wp_kses_post') }}
+                {% if panel.linkText and panel.linkUrl %}
+                  <a class="content-link" href="{{ panel.linkUrl|e }}" target="_blank">{{ panel.linkText|e }}</a>
+                {% endif %}
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

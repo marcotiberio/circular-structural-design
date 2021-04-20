@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-class GridPostsLatest extends window.HTMLDivElement {
+class AccordionImageGrid extends window.HTMLDivElement {
   constructor (...args) {
     const self = super(...args)
     self.init()
@@ -9,8 +9,14 @@ class GridPostsLatest extends window.HTMLDivElement {
 
   init () {
     this.$ = $(this)
+    this.resolveElements()
     this.bindFunctions()
     this.bindEvents()
+  }
+
+  resolveElements () {
+    this.$button = $('.panel-trigger', this)
+    this.$content = $('.panel-content', this)
   }
 
   bindFunctions () {
@@ -22,17 +28,16 @@ class GridPostsLatest extends window.HTMLDivElement {
   }
 
   togglePanel (e) {
-    console.log('test')
     const $panel = $(e.currentTarget)
 
     if ($panel.attr('aria-expanded') === 'true') {
       $panel.attr('aria-expanded', 'false')
-      $panel.next().attr('aria-hidden', 'true').slideUp()
+      $panel.next().slideToggle('fast')
     } else {
       $panel.attr('aria-expanded', 'true')
-      $panel.next().attr('aria-hidden', 'false').slideDown()
+      $panel.next().slideToggle('fast')
     }
   }
 }
 
-window.customElements.define('flynt-grid-posts-latest', GridPostsLatest, { extends: 'div' })
+window.customElements.define('flynt-accordion-image-grid', AccordionImageGrid, { extends: 'div' })

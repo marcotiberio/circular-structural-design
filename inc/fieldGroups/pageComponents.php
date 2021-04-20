@@ -15,6 +15,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\AccordionImageGrid\getACFLayout(),
                     Components\AccordionProject\getACFLayout(),
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),

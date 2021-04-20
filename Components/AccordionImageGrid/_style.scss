@@ -1,0 +1,112 @@
+[is='flynt-accordion-image-grid'] {
+  a {
+    color: $color-accent;
+    display: inline;
+    transition: color 0.2s ease-out;
+  }
+
+  .container {
+    @media (max-width: $breakpoint-tablet-horizontal - 1) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .preContent {
+      max-width: 1440px;
+      text-align: left;
+    }
+
+    .accordion {
+      @include reset-list;
+      column-gap: 25px;
+      display: grid;
+      flex-direction: row;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-rows: auto;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    }
+
+    .panel {
+      padding-bottom: 15px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &-trigger {
+        border-bottom: 1px solid #000;
+        cursor: pointer;
+        display: grid;
+        margin: -20px 0 0;
+        padding: 20px 0;
+        place-items: flex-end;
+        position: relative;
+        width: 100%;
+
+        &::after {
+          $color-text-rgb: red($color-contrast), green($color-contrast), blue($color-contrast);
+
+          background-image: url('/wp-content/uploads/2021/03/arrow-right.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          width: 20px;
+        }
+
+        &[aria-expanded='true'] {
+          &::after {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      // do not add margins or padding to this, it will break the layout
+      &-content {
+        display: none;
+        margin: 0;
+
+        &-open {
+          display: block;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      // add custom paddings here
+      &-inner {
+        padding: 0;
+
+        .box-inner {
+          margin-top: 25px;
+        }
+
+        figure {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    .centerMaxWidthContainer {
+      // padding-left: 0;
+      // padding-right: 0;
+    }
+  }
+
+}
