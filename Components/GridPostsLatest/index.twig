@@ -32,10 +32,10 @@
                 {% endif %}
               <button class="panel-trigger p" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}"></button>
               <div class="content-inner boxPadding" aria-hidden="true">
-                <p class="content-excerpt">{{ item.preview.read_more(false) }}</p>
-                <footer class="content-footer">
+                <p class="content-excerpt">{{ post.preview.read_more(false) }}</p>
+                {# <footer class="content-footer">
                   <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">Link</a>
-                </footer>
+                </footer> #}
               </div>
             </div>
           </li>

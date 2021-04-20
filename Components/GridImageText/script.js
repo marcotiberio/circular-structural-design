@@ -9,23 +9,33 @@ class GridImageText extends window.HTMLElement {
 
   init () {
     this.$ = $(this)
-    this.bindEvents()
     this.resolveElements()
-  }
-
-  bindEvents () {
-    this.$.on('click', this.triggerSummary)
+    this.bindEvents()
   }
 
   resolveElements () {
-    this.$showSummary = $('.slide-toggle', this)
-    this.$summary = $('.content-inner', this)
+    this.$button = $('.panel-trigger', this)
+    this.$content = $('.content-inner', this)
   }
 
-  connectedCallback () {}
+  bindFunctions () {
+    this.togglePanel = this.togglePanel.bind(this)
+  }
 
-  triggerSummary (e) {
-    this.$.toggleClass('flyntComponent-menuIsOpen')
+  bindEvents () {
+    this.$.on('click', '[aria-controls]', this.togglePanel)
+  }
+
+  togglePanel (e) {
+    const $panel = $(e.currentTarget)
+
+    if ($panel.attr('aria-expanded') === 'true') {
+      $panel.attr('aria-expanded', 'false')
+      $panel.next().slideToggle('fast')
+    } else {
+      $panel.attr('aria-expanded', 'true')
+      $panel.next().slideToggle('fast')
+    }
   }
 }
 

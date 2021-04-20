@@ -29,14 +29,14 @@
                   data-sizes="auto"
                   alt="{{ item.image.alt|e }}">
               {% endif %}
+              <button class="panel-trigger p" type="button" aria-expanded="false"></button>
               {% if item.contentHtml %}
-                <div class="slide-toggle"><p>Show</p></div>
-                <div class="content-inner {{ options.card == 'layoutCard' ? 'boxPadding' }}">
-                  {{ item.contentHtml|e('wp_kses_post') }}
-                  {% if item.linkText and item.linkUrl %}
-                    <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">{{ item.linkText|e }}</a>
-                  {% endif %}
-                </div>
+              <div class="content-inner boxPadding" aria-hidden="true">
+                {{ item.contentHtml|e('wp_kses_post') }}
+                {# <footer class="content-footer">
+                  <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">Link</a>
+                </footer> #}
+              </div>
               {% endif %}
           </li>
         {% endif %}
