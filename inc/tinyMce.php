@@ -37,6 +37,10 @@ add_filter('tiny_mce_before_init', function ($init) {
             // Send it to style_formats as true js array
             $init['style_formats'] = json_encode($config['styleformats']);
         }
+
+        if (isset($config['textcolor_map'])) {
+            $init['textcolor_map'] = json_encode($config['textcolor_map']);
+        }
     }
     return $init;
 });
@@ -71,14 +75,19 @@ function getBlockFormats($blockFormats)
 function getConfig()
 {
     return [
+        'textcolor_map' => [
+            '000', 'Black',
+            'fff', 'White',
+            'beccca', 'Tiara'
+        ],
         'blockformats' => [
             'Paragraph' => 'p',
             'Heading 1' => 'h1',
             'Heading 2' => 'h2',
-            'Heading 3' => 'h3',
-            'Heading 4' => 'h4',
-            'Heading 5' => 'h5',
-            'Heading 6' => 'h6'
+            'Heading 3' => 'h3'
+            // 'Heading 4' => 'h4',
+            // 'Heading 5' => 'h5',
+            // 'Heading 6' => 'h6'
         ],
         'styleformats' => [
             [
@@ -100,60 +109,60 @@ function getConfig()
                         'classes' => 'h3',
                         'selector' => '*'
                     ],
-                    [
-                        'title' => 'Heading 4',
-                        'classes' => 'h4',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 5',
-                        'classes' => 'h5',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 6',
-                        'classes' => 'h6',
-                        'selector' => '*'
-                    ],
+                    // [
+                    //     'title' => 'Heading 4',
+                    //     'classes' => 'h4',
+                    //     'selector' => '*'
+                    // ],
+                    // [
+                    //     'title' => 'Heading 5',
+                    //     'classes' => 'h5',
+                    //     'selector' => '*'
+                    // ],
+                    // [
+                    //     'title' => 'Heading 6',
+                    //     'classes' => 'h6',
+                    //     'selector' => '*'
+                    // ],
                 ]
             ],
-            [
-                'title' => 'Buttons',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Button',
-                        'classes' => 'button',
-                        'selector' => 'a,button'
-                    ],
-                    [
-                        'title' => 'Button Ghost',
-                        'classes' => 'button--ghost',
-                        'selector' => '.button'
-                    ],
-                    [
-                        'title' => 'Button Small',
-                        'classes' => 'button--small',
-                        'selector' => '.button'
-                    ],
-                    [
-                        'title' => 'Button Link',
-                        'classes' => 'button--link',
-                        'selector' => '.button'
-                    ]
-                ]
-            ],
-            [
-                'title' => 'Icon Lists',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Check Circle',
-                        'classes' => 'iconList iconList--checkCircle',
-                        'selector' => 'ul,ol'
-                    ]
-                ]
-            ]
+            // [
+            //     'title' => 'Buttons',
+            //     'icon' => '',
+            //     'items' => [
+            //         [
+            //             'title' => 'Button',
+            //             'classes' => 'button',
+            //             'selector' => 'a,button'
+            //         ],
+            //         [
+            //             'title' => 'Button Ghost',
+            //             'classes' => 'button--ghost',
+            //             'selector' => '.button'
+            //         ],
+            //         [
+            //             'title' => 'Button Small',
+            //             'classes' => 'button--small',
+            //             'selector' => '.button'
+            //         ],
+            //         [
+            //             'title' => 'Button Link',
+            //             'classes' => 'button--link',
+            //             'selector' => '.button'
+            //         ]
+            //     ]
+            // ],
+            // [
+            //     'title' => 'Icon Lists',
+            //     'icon' => '',
+            //     'items' => [
+            //         [
+            //             'title' => 'Check Circle',
+            //             'classes' => 'iconList iconList--checkCircle',
+            //             'selector' => 'ul,ol'
+            //         ]
+            //     ]
+            // ]
         ],
         'toolbars' => [
             'default' => [
@@ -163,8 +172,8 @@ function getConfig()
                     'forecolor',
                     'bold',
                     'italic',
-                    'strikethrough',
-                    'blockquote',
+                    // 'strikethrough',
+                    // 'blockquote',
                     '|',
                     'bullist',
                     'numlist',

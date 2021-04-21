@@ -23,7 +23,7 @@ function getACFLayout()
                 'type' => 'repeater',
                 'layout' => 'block',
                 'min' => 1,
-                'button_label' => __('Add Accordion Panel', 'flynt'),
+                'button_label' => __('Add Resource', 'flynt'),
                 'sub_fields' => [
                     [
                         'label' => __('Image', 'flynt'),
