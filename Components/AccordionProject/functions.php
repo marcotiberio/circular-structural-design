@@ -37,19 +37,33 @@ function getACFLayout()
                 ],
             ],
             [
-                'label' => __('Accordion Panels', 'flynt'),
+                'label' => __('Inner Content', 'flynt'),
+                'name' => 'contentTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Solution', 'flynt'),
                 'name' => 'accordionPanels',
                 'type' => 'repeater',
                 'layout' => 'block',
                 'min' => 1,
-                'button_label' => __('Add Accordion Panel', 'flynt'),
+                'button_label' => __('Add Solution', 'flynt'),
                 'sub_fields' => [
+                    [
+                        'label' => __('Text', 'flynt'),
+                        'name' => 'textTab',
+                        'type' => 'tab',
+                        'placement' => 'top',
+                        'endpoint' => 0
+                    ],
                     [
                         'label' => __('Panel Title', 'flynt'),
                         'name' => 'panelTitle',
                         'type' => 'text',
                         'wrapper' => [
-                            'width' => 25
+                            'width' => 33
                         ],
                     ],
                     [
@@ -58,7 +72,7 @@ function getACFLayout()
                         'type' => 'text',
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 25
+                            'width' => 33
                         ],
                     ],
                     [
@@ -68,19 +82,7 @@ function getACFLayout()
                         'return_format' => 'url',
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 25
-                        ],
-                    ],
-                    [
-                        'label' => __('Image', 'flynt'),
-                        'name' => 'image',
-                        'type' => 'image',
-                        'preview_size' => 'medium',
-                        'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
-                        'required' => 1,
-                        'mime_types' => 'jpg,jpeg,png,svg',
-                        'wrapper' => [
-                            'width' => 25
+                            'width' => 33
                         ],
                     ],
                     [
@@ -94,23 +96,32 @@ function getACFLayout()
                             'width' => 100
                         ],
                     ],
+                    [
+                        'label' => __('Visuals', 'flynt'),
+                        'name' => 'visualsTab',
+                        'type' => 'tab',
+                        'placement' => 'top',
+                        'endpoint' => 0
+                    ],
+                    [
+                        'label' => __('Image', 'flynt'),
+                        'name' => 'image',
+                        'type' => 'image',
+                        'preview_size' => 'medium',
+                        'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
+                        'required' => 0,
+                        'mime_types' => 'jpg,jpeg,png,svg',
+                        'wrapper' => [
+                            'width' => 50
+                        ],
+                    ],
+                    // [
+                    //     'label' => __('Video', 'flynt'),
+                    //     'name' => 'videoCode',
+                    //     'type' => 'text',
+                    //     'required' => 0
+                    // ],
                 ],
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    FieldVariables\getTheme()
-                ]
             ]
         ],
     ];

@@ -164,6 +164,7 @@
     ]
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "browserslist": [
