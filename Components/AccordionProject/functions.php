@@ -97,8 +97,8 @@ function getACFLayout()
                         ],
                     ],
                     [
-                        'label' => __('Visuals', 'flynt'),
-                        'name' => 'visualsTab',
+                        'label' => __('Image', 'flynt'),
+                        'name' => 'imageTab',
                         'type' => 'tab',
                         'placement' => 'top',
                         'endpoint' => 0
@@ -115,12 +115,33 @@ function getACFLayout()
                             'width' => 50
                         ],
                     ],
-                    // [
-                    //     'label' => __('Video', 'flynt'),
-                    //     'name' => 'videoCode',
-                    //     'type' => 'text',
-                    //     'required' => 0
-                    // ],
+                    [
+                        'label' => __('Video', 'flynt'),
+                        'name' => 'videoTab',
+                        'type' => 'tab',
+                        'placement' => 'top',
+                        'endpoint' => 0
+                    ],
+                    [
+                        'label' => __('Video: Vimeo', 'flynt'),
+                        'name' => 'vimeoCode',
+                        'type' => 'text',
+                        'required' => 0,
+                        'instructions' => __('https://vimeo.com/XXXXXXXXX', 'flynt'),
+                        'wrapper' => [
+                            'width' => 50
+                        ],
+                    ],
+                    [
+                        'label' => __('Video: Youtube', 'flynt'),
+                        'name' => 'youtubeCode',
+                        'type' => 'text',
+                        'required' => 0,
+                        'instructions' => __('https://youtu.be/XXXXXXXXX', 'flynt'),
+                        'wrapper' => [
+                            'width' => 50
+                        ],
+                    ],
                 ],
             ]
         ],
