@@ -58,10 +58,17 @@
           display: flex;
           flex-flow: column wrap;
           justify-content: center;
-          padding: ($container-padding-tablet * 2) 0;
+          padding: ($container-padding-tablet * 2) $container-padding-tablet;
         }
 
         @media (min-width: $breakpoint-tablet-horizontal) {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          padding: ($container-padding-tablet * 2) $container-padding-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop-wide) {
           display: flex;
           flex-flow: column wrap;
           justify-content: center;
@@ -72,7 +79,7 @@
 
     &-contentWrapper {
       @include reset-content-margins;
-      max-width: 680px;
+      max-width: 640px;
     }
 
     .figure-caption {
