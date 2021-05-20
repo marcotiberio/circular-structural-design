@@ -1,62 +1,86 @@
 [is='flynt-block-text-image-crop'] {
+  background-color: #beccca;
+  min-height: calc(100vh - 178px);
   overflow: hidden;
+  padding: $component-spacing-mobile 0;
 
-  @media (max-width: $breakpoint-tablet - 1) {
-    &.componentSpacing {
-      margin: 0;
-      padding: 0;
-    }
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    padding: $component-spacing-desktop 0;
   }
 
   .box {
-    @media (min-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: grid;
+      grid-template-columns: 1;
+    }
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
       display: flex;
+      flex-direction: row-reverse;
+      height: calc(100vh - 178px);
       margin-top: 0;
+
+      .figure-caption {
+        color: $color-background;
+        text-align: left;
+        transform: translateY(-125px);
+        width: 200px;
+
+        &::before {
+          content: '➞';
+          display: block;
+        }
+      }
+
+      .box-contentWrapper {
+        margin-left: auto;
+      }
     }
 
     &-inner {
       &--image {
         position: relative;
 
-        @media (min-width: $breakpoint-tablet) {
-          width: 45%;
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          width: 55%;
         }
       }
 
       &--content {
         padding: $gutter-width $container-padding-mobile;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-tablet-horizontal) {
           padding: $container-padding-tablet;
-          width: 55%;
+          width: 45%;
         }
 
         @media (min-width: $breakpoint-tablet-horizontal) {
-          padding: $container-padding-tablet ($container-padding-tablet * 2);
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          padding: ($container-padding-tablet * 2) 0;
         }
 
-        @media (min-width: $breakpoint-desktop) {
-          padding: $container-padding-desktop ($container-padding-desktop * 2);
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          padding: ($container-padding-tablet * 2) 0;
         }
       }
     }
 
     &-contentWrapper {
       @include reset-content-margins;
-      max-width: $content-max-width;
+      max-width: 680px;
     }
 
-    &--imageRight {
-      @media (min-width: $breakpoint-tablet) {
-        flex-direction: row-reverse;
+    .figure-caption {
+      color: $color-background;
 
-        .figure-caption {
-          text-align: right;
-        }
-
-        .box-contentWrapper {
-          margin-left: auto;
-        }
+      &::before {
+        content: '➞';
+        display: block;
       }
     }
   }
@@ -64,7 +88,7 @@
   .figure {
     margin: 0;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet-horizontal) {
       bottom: 0;
       left: 0;
       position: absolute;
@@ -75,9 +99,14 @@
     &-image {
       font-family: 'object-fit: cover';
       height: 100%;
-      object-fit: cover;
+      mix-blend-mode: multiply;
+      object-fit: contain;
       object-position: 50% 50%;
       width: 100%;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        transform: translateX(200px);
+      }
     }
 
     &-caption {
