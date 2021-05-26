@@ -2,7 +2,7 @@
   background-color: #beccca;
   min-height: calc(100vh - 178px);
   overflow: hidden;
-  padding: $component-spacing-mobile 0;
+  padding: 0;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
     padding: $component-spacing-desktop 0;
@@ -10,8 +10,8 @@
 
   .box {
     @media (max-width: $breakpoint-tablet-horizontal) {
-      display: grid;
-      grid-template-columns: 1;
+      display: flex;
+      flex-flow: column-reverse wrap;
     }
 
     @media (min-width: $breakpoint-tablet-horizontal) {
