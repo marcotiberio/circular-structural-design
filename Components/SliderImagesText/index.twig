@@ -27,6 +27,11 @@
                   data-sizes="auto"
                   alt="{{ item.image.alt|e }}">
               {% endif %}
+              {% if item.contentHtml %}
+              <div class="content-bottom">
+                {{ item.contentHtml|e('wp_kses_post') }}
+              </div>
+              {% endif %}
               {% if item.linkText and item.linkUrl %}
                 <a class="content-link" href="{{ item.linkUrl|e }}" target="_blank">{{ item.linkText|e }}</a>
               {% endif %}

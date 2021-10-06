@@ -79,7 +79,7 @@ function getACFLayout()
                         'return_format' => 'url',
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 20
+                            'width' => 50
                         ],
                     ]
                 ],
