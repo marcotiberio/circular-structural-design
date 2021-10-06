@@ -9,9 +9,10 @@
       <ul class="grid grid--columns{{ options.columns }}">
         {% for item in items %}
           <li class="grid-item">
-            <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
+            {# <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
               <h3 class="content-title">{{ item.title }}</h3>
-            </a>
+            </a> #}
+            <h3 class="content-title">{{ item.title }}</h3>
             <div class="content">
               <img class="content-image lazyload"
                 src="{{ item.thumbnail.src|resizeDynamic(424, 283) }}"
@@ -32,7 +33,7 @@
                 {% endif %}
               <button class="panel-trigger p" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}"></button>
               <div class="content-inner boxPadding" aria-hidden="true">
-                <p class="content-excerpt">{{ post.preview.read_more(false) }}</p>
+                <p class="content-excerpt">{{ item.post_excerpt }}</p>
                 {# <footer class="content-footer">
                   <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">Link</a>
                 </footer> #}
