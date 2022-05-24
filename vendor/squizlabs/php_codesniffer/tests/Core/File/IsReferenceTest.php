@@ -16,7 +16,7 @@ class IsReferenceTest extends AbstractMethodUnitTest
 
 
     /**
-     * Test correctly identifying whether a "bitwise and" token is a reference or not.
+     * Test a class that extends another.
      *
      * @param string $identifier Comment which precedes the test case.
      * @param bool   $expected   Expected function output.
@@ -226,14 +226,6 @@ class IsReferenceTest extends AbstractMethodUnitTest
             ],
             [
                 '/* testArrowFunctionReturnByReference */',
-                true,
-            ],
-            [
-                '/* testArrowFunctionPassByReferenceA */',
-                true,
-            ],
-            [
-                '/* testArrowFunctionPassByReferenceB */',
                 true,
             ],
             [

@@ -140,11 +140,5 @@ $closure = function() use (&$var){};
 /* testArrowFunctionReturnByReference */
 fn&($x) => $x;
 
-/* testArrowFunctionPassByReferenceA */
-$fn = fn(array &$one) => 1;
-
-/* testArrowFunctionPassByReferenceB */
-$fn = fn($param, &...$moreParams) => 1;
-
 /* testClosureReturnByReference */
 $closure = function &($param) use ($value) {};

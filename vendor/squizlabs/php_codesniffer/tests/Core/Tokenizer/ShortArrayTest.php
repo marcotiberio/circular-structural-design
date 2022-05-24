@@ -72,8 +72,6 @@ class ShortArrayTest extends AbstractMethodUnitTest
             ['/* testClassMemberDereferencingOnInstantiation1 */'],
             ['/* testClassMemberDereferencingOnInstantiation2 */'],
             ['/* testClassMemberDereferencingOnClone */'],
-            ['/* testNullsafeMethodCallDereferencing */'],
-            ['/* testInterpolatedStringDereferencing */'],
             ['/* testLiveCoding */'],
         ];
 

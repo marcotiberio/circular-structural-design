@@ -65,31 +65,31 @@ function getACFLayout()
                 'load_terms' => 0,
                 'return_format' => 'object'
             ],
-            // [
-            //     'label' => __('Options', 'flynt'),
-            //     'name' => 'optionsTab',
-            //     'type' => 'tab',
-            //     'placement' => 'top',
-            //     'endpoint' => 0
-            // ],
-            // [
-            //     'label' => '',
-            //     'name' => 'options',
-            //     'type' => 'group',
-            //     'layout' => 'row',
-            //     'sub_fields' => [
-            //         FieldVariables\getTheme(),
-            //         [
-            //             'label' => __('Columns', 'flynt'),
-            //             'name' => 'columns',
-            //             'type' => 'number',
-            //             'default_value' => 3,
-            //             'min' => 1,
-            //             'max' => 9,
-            //             'step' => 1
-            //         ]
-            //     ]
-            // ],
+            [
+                'label' => __('Options', 'flynt'),
+                'name' => 'optionsTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => '',
+                'name' => 'options',
+                'type' => 'group',
+                'layout' => 'row',
+                'sub_fields' => [
+                    FieldVariables\getTheme(),
+                    [
+                        'label' => __('Columns', 'flynt'),
+                        'name' => 'columns',
+                        'type' => 'number',
+                        'default_value' => 3,
+                        'min' => 1,
+                        'max' => 4,
+                        'step' => 1
+                    ]
+                ]
+            ],
         ]
     ];
 }

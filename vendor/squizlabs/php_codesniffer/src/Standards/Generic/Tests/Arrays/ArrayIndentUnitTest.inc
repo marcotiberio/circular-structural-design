@@ -63,22 +63,6 @@ $array = [
   $c ? $d : $e,
 ];
 
-$foo =
-[
-    'bar' =>
-   [
-    ],
-];
-
-$foo = [
-    'foo'
-        . 'bar',
-    [
-            'baz',
-            'qux',
-        ],
-];
-
 // phpcs:set Generic.Arrays.ArrayIndent indent 2
 
 $var = [
@@ -86,15 +70,3 @@ $var = [
         2 => 'two',
     /* three */ 3 => 'three',
     ];
-
-// phpcs:set Generic.Arrays.ArrayIndent indent 4
-
-$array = array(
-    match ($test) { 1 => 'a', 2 => 'b' }
-          => 'dynamic keys, woho!',
-);
-
-$array = [
-  match ($test) { 1 => 'a', 2 => 'b' }
-       => 'dynamic keys, woho!',
-];

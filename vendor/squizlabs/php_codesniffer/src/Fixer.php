@@ -184,9 +184,6 @@ class Fixer
                 }
 
                 echo ']... ';
-                if (PHP_CODESNIFFER_VERBOSITY > 1) {
-                    echo PHP_EOL;
-                }
             }
 
             if ($this->numFixes === 0 && $this->inConflict === false) {
@@ -256,10 +253,6 @@ class Fixer
         fclose($fixedFile);
         if (is_file($tempName) === true) {
             unlink($tempName);
-        }
-
-        if ($diff === null) {
-            return '';
         }
 
         if ($colors === false) {
@@ -421,7 +414,6 @@ class Fixer
         }
 
         $this->changeset = [];
-        return true;
 
     }//end endChangeset()
 
@@ -751,7 +743,7 @@ class Fixer
      * @param int $change The number of spaces to adjust the indent by
      *                    (positive or negative).
      *
-     * @return void
+     * @return bool If the change was accepted.
      */
     public function changeCodeBlockIndent($start, $end, $change)
     {
