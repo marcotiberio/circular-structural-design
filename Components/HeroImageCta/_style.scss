@@ -14,31 +14,31 @@
     padding-top: 0;
     position: absolute;
     text-align: center;
-    top: $component-spacing-desktop;
+    top: 40%;
     width: 60%;
 
     @media (max-width: $breakpoint-tablet) {
-      top: $component-spacing-mobile;
+      top: 40%;
       width: 80%;
     }
 
   }
 
   .sub-header {
-    bottom: 0;
     color: $color-background;
     font-weight: 400;
     position: absolute;
     text-align: center;
+    top: 55%;
     width: 60%;
 
     @media (max-width: $breakpoint-tablet) {
-      bottom: $component-spacing-tablet;
+      top: 60%;
       width: 100%;
     }
 
     @media (max-width: $breakpoint-desktop) {
-      bottom: $component-spacing-tablet;
+      top: 60%;
       width: 100%;
     }
 
@@ -121,18 +121,19 @@
     }
 
     &-pictureEl {
-      height: auto;
-      margin-top: 5%;
-      width: 45%;
+      height: 100vh;
+      margin-top: 0;
+      object-fit: cover;
+      width: 100vw;
 
       @media (max-width: $breakpoint-tablet) {
         margin-top: -$component-spacing-desktop;
-        width: 80%;
+        width: 100%;
       }
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         margin-top: -$component-spacing-desktop;
-        width: 80%;
+        width: 100%;
       }
 
     }

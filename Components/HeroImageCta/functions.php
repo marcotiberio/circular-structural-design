@@ -50,7 +50,7 @@ function getACFLayout()
                 'label' => __('Header', 'flynt'),
                 'name' => 'header',
                 'type' => 'text',
-                'required' => 1,
+                'required' => 0,
                 'wrapper' => [
                     'width' => 50
                 ],
@@ -59,7 +59,7 @@ function getACFLayout()
                 'label' => __('Sub Header', 'flynt'),
                 'name' => 'subHeader',
                 'type' => 'text',
-                'required' => 1,
+                'required' => 0,
                 'wrapper' => [
                     'width' => 50
                 ],

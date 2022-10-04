@@ -43,6 +43,10 @@
     padding: $gutter-width 0 0 $gutter-width;
     width: 33%;
 
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+
     .content-inner {
       display: none;
     }
