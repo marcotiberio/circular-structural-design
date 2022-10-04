@@ -47,24 +47,6 @@ function getACFLayout()
                 ]
             ],
             [
-                'label' => __('Header', 'flynt'),
-                'name' => 'header',
-                'type' => 'text',
-                'required' => 0,
-                'wrapper' => [
-                    'width' => 50
-                ],
-            ],
-            [
-                'label' => __('Sub Header', 'flynt'),
-                'name' => 'subHeader',
-                'type' => 'text',
-                'required' => 0,
-                'wrapper' => [
-                    'width' => 50
-                ],
-            ],
-            [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
                 'type' => 'wysiwyg',

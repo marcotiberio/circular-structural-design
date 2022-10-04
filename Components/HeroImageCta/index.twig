@@ -1,5 +1,7 @@
 <div class="flyntComponent {{ options.fullWidth == false ? "componentSpacing #{options.theme}" : '' }} {{ options.fullWidth ? 'fullWidth' : '' }}" is="flynt-hero-image-cta">
-  <h1 class="header">{{ header|e }}</h1>
+    <div class="header centerMaxWidthContainerNav">
+      <div class="header-inner">{{ contentHtml|e('wp_kses_post') }}</div>
+    </div>
     <picture class="content-pictureEl">
       {% if images.imageMobile %}
         <source
@@ -44,5 +46,4 @@
             alt="{{ images.imageDesktop.alt|e }}">
       {% endif %}
     </picture>
-  <h1 class="sub-header">{{ subHeader|e }}</h1>  
 </div>
